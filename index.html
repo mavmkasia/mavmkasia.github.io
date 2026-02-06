@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maharshi Arvind Vidya Mandir, Kushinagar</title>
+    <style>
+        /* General Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* Color Variables */
+        :root {
+            --primary-color: #003366; /* Deep Academic Blue */
+            --secondary-color: #ff9933; /* Accent Orange */
+            --light-bg: #f4f4f4;
+            --text-color: #333;
+        }
+
+        body { background-color: var(--light-bg); }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: #222;
+            color: white;
+            padding: 5px 20px;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: white;
+            padding: 20px;
+            border-bottom: 4px solid var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .header img { height: 80px; margin-right: 20px; }
+        .school-name h1 { color: var(--primary-color); font-size: 28px; text-transform: uppercase; margin-bottom: 5px; }
+        .school-name p { font-size: 14px; color: #666; font-weight: bold; }
+
+        /* Navigation */
+        .navbar {
+            background-color: var(--primary-color);
+            overflow: hidden;
+            text-align: center;
+        }
+        .navbar a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .navbar a:hover { background-color: var(--secondary-color); color: black; }
+
+        /* Scrolling News (Marquee) */
+        .news-ticker {
+            background-color: #eee;
+            border-bottom: 1px solid #ccc;
+            padding: 8px;
+            color: red;
+            font-weight: bold;
+            display: flex;
+        }
+        .news-label { background: red; color: white; padding: 2px 8px; margin-right: 10px; font-size: 12px; }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 15px;
+        }
+
+        /* Left Column (Main Content) */
+        .main-content {
+            flex: 3;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Right Column (Sidebar/Notices) */
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            min-width: 300px;
+        }
+
+        /* Section Styling */
+        h2.section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .principal-box {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .principal-img {
+            width: 120px;
+            height: 140px;
+            background-color: #ddd; /* Placeholder for image */
+            object-fit: cover;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        /* Notice Board Styling */
+        .notice-board {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #eee;
+            padding: 10px;
+        }
+        .notice-item {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ccc;
+            font-size: 14px;
+        }
+        .notice-item a { color: var(--primary-color); text-decoration: none; }
+        .notice-item span { display: block; font-size: 11px; color: #888; }
+        
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 20px 20px;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .footer p { margin-bottom: 2px; }
+          .footer a { color: white;}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .header { flex-direction: column; }
+            .header img { margin: 0 0 10px 0; }
+            .navbar a { display: block; width: 100%; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXlMrggLtcxIuQNiF7dnL3ILn5UccLV--sYiLM2kpVqA&s" alt="School Logo"> 
+        <div class="school-name">
+            <h1>Maharshi Arvind Vidya Mandir</h1>
+            <p>Varishth Madhyamik Vidyalaya, Kasia, Kushinagar</p>
+            <p style="font-size: 12px; color: #d35400;">(Affiliated to U.P. Board)</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Admission</a>
+        <a href="#">Gallery</a>
+        <a href="mailto:mavmkasia@gmail.com" >Contact Us</a>
+    </nav>
+
+    <div class="news-ticker">
+        <span class="news-label">LATEST NEWS</span>
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            Admission Open for Session 2026-27 | Board Exam Admit Cards are available for download.
+        </marquee>
+    </div>
+
+    <div class="container">
+        
+        <div class="main-content">
+            <h2 class="section-title">Welcome to Our School</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTb8PRk6UFJwkWlbR6rVHzqQit9V5Nfa30uYM-QzcdOFKSUfOUiegkahTD&s=10" alt="School Building" style="width:100%; height:auto; margin-bottom:20px;">
+            <p>Maharshi Arvind Vidya Mandir is dedicated to providing quality education in Kasia, Kushinagar. Inspired by the ideals of Sri Aurobindo, we focus on the holistic development of our students, blending modern science with traditional values.</p>
+            <br>
+            
+            <h2 class="section-title">Principal's Desk</h2>
+            <div class="principal-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9xqZ3vgPLm1YDaUbsq1Kw0GA5MXHmm3SnegMWHI3_w&s" alt="Principal" class="principal-img">
+                <div>
+                    <p><strong>Dear Students and Parents,</strong></p>
+                    <p style="margin-top:5px; font-size: 14px; line-height: 1.6;">
+                        "Education is not the filling of a pail, but the lighting of a fire." <br><br>
+                        At Maharshi Arvind Vidya Mandir, we strive to create an environment where every student can excel. We are committed to academic excellence and moral integrity.
+                    </p>
+                    <p style="margin-top:10px; font-weight:bold;">- Chandrika Sharma</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h2 class="section-title">Notice Board</h2>
+            <div class="notice-board">
+                <marquee direction="up" scrollamount="3" height="100%" onmouseover="this.stop();" onmouseout="this.start();">
+                    <div class="notice-item">
+                        <a href="https://www.india.gov.in/calendar">Holiday List 2026</a>
+                        <span>Jan 01, 2026</span>
+                    </div>
+                    <div class="notice-item">
+                        <a href="https://scholarship.up.gov.in/index.aspx">Scholarship Form Submission</a>
+                        <span>Dec 15, 2025</span>
+                    </div>
+                    <div class="notice-item">
+                        <a href="#">No New Notification</a>
+                        <span>Dec 15, 2025</span>
+                    </div>
+                      <div class="notice-item">
+                        <a href="#">No New Notification</a>
+                        <span>Dec 15, 2025</span>
+                    </div>
+                      <div class="notice-item">
+                        <a href="#">No New Notification</a>
+                        <span>Dec 15, 2025</span>
+                    </div>
+                      <div class="notice-item">
+                        <a href="#">No New Notification</a>
+                        <span>Dec 15, 2025</span>
+                    </div>
+                </marquee>
+            </div>
+
+            <br>
+            <h2 class="section-title">Quick Links</h2>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 8px;"><a href="https://scholarship.up.gov.in/index.aspx" style="text-decoration: none; color: #003366;">➤ UP Scholarship Portal</a></li>
+                <li style="margin-bottom: 8px;"><a href="https://upmsp.edu.in/Syllabus.html" style="text-decoration: none; color: #003366;">➤ Syllabus Download</a></li>
+                <li style="margin-bottom: 8px;"><a href="https://upmsp.edu.in/" style="text-decoration: none; color: #003366;">➤ U.P. Board Official Site</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p><strong>Maharshi Arvind Vidya Mandir Varishth Madhyamik Vidyalaya</strong></p>
+        <p>Kasia, Kushinagar, Uttar Pradesh - 274402</p>
+        <p>Email: <a href="mailto:mavmkasia@gmail.com" >mavmkasia@gmail.com</a> | Phone: <a href="tel:+91 98385 05419">+91 98385 05419</a></p>
+        <br>
+        <p style="font-size: 12px;">&copy; 2026 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
